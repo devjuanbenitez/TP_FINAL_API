@@ -1,4 +1,4 @@
-# Servicio rest con Spring Boot(java), Fiber(Go) y Django (Python).
+# Servicio rest para ABM con Spring Boot(java), Fiber(Go) y Django (Python).
 
 Se trabaja con 3 entidades basicas de un sistema de productos.
 
