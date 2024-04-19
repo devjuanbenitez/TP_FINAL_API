@@ -1,0 +1,41 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    container_name: db_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  api-spring-aplicacion:
+    build:
+      context: api-rest-springboot
+      dockerfile: Dockerfile
+    container_name: api-spring-aplicacion
+    ports:
+      - "8080:8080"  # Puerto en el que se ejecuta tu aplicación Spring Boot
+    depends_on:
+      - postgres  # Dependencia de la base de datos PostgreSQL
+  
+  api-python-application:
+    build:
+      context: api-rest-python
+      dockerfile: Dockerfile
+    container_name: api-python-application
+    ports:
+      - "8000:8000"  # Mapea el puerto 8000 del contenedor al puerto 8000 del host
+    depends_on:
+      - postgres  # Dependencia de la base de datos PostgreSQL
+
+  api-go-aplication:
+    build:
+      dockerfile: Dockerfile
+      context: api-rest-fiber-go
+    container_name: api-go-aplication
+    ports:
+      - "3000:3000"  # Puerto en el que se ejecuta tu aplicación Spring Boot
+    depends_on:
+      - postgres  # Dependencia de la base de datos PostgreSQL
