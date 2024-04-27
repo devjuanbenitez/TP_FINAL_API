@@ -8,8 +8,8 @@ Se trabaja con 3 entidades basicas de un sistema de productos.
 1. **Clona el repositorio**:
    
    ```bash
-   git clone https://github.com/devjuanbenitez/TP_FINAL_API
-   cd TP_FINAL_API
+   git clone https://github.com/devjuanbenitez/apirest-go-java-python-and-jmeter
+   cd apirest-go-java-python-and-jmeter
 
   
 2. **Contruye e Inicia la aplicación con Docker Compose**
