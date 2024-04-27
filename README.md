@@ -2,7 +2,7 @@
 
 Se trabaja con 3 entidades basicas de un sistema de productos.
 
-## Base de datos
+## Base de datos Postgresql
 ![App Screenshot](/img/bd.png)
 ## Ejecutar con Docker
 1. **Clona el repositorio**:
@@ -20,3 +20,9 @@ Se trabaja con 3 entidades basicas de un sistema de productos.
 
 ## Documentacion de las recursos disponibles
 [Ver Documentación de Postman](https://documenter.getpostman.com/view/20132784/2sA3Bn7Cas)
+
+## Se agrega proyecto Jmeter para evaluacion de rendimiento entre las 3 implementaciones
+[Proyecto Jmeter](https://github.com/devjuanbenitez/apirest-go-java-python-and-jmeter/tree/master/test-planing-jmeter)
+
+[Ver resultados preliminares de rendimiento](https://devjuanbenitez.github.io/apirest-go-java-python-and-jmeter/result/)
+
